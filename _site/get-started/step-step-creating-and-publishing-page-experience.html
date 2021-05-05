@@ -1,0 +1,934 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>逐步：建立和發佈頁面內體驗</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><span class="product-logo" style="font-family:'Balto Web','Public Sans';font-size:2em;font-weight:bold;">布萊特灣畫廊<sup>™</sup></span></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+Brightcove 
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">首頁</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/get-started/">開始使用</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">逐步：建立和發佈頁面內體驗</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        				<select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+					<option value="">其他布萊特灣文件</option>
+					
+						
+							<option value="https://support.brightcove.com">文件首頁</option>
+						
+					
+						
+							<option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
+						
+					
+						
+							<option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
+						
+					
+						
+							<option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
+						
+					
+						
+							<option value="https://engage.support.brightcove.com">布萊特灣參與</option>
+						
+					
+						
+							<option value="https://live.support.brightcove.com">Brightcove Live</option>
+						
+					
+						
+							<option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
+						
+					
+						
+							<option value="https://ssai.support.brightcove.com">布萊特灣</option>
+						
+					
+						
+							<option value="https://social.support.brightcove.com">布萊特灣社會</option>
+						
+					
+						
+							<option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
+						
+					
+						
+							<option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
+						
+					
+						
+							<option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
+						
+					
+						
+							<option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
+						
+					
+						
+							<option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
+						
+					
+						
+							<option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
+						
+					
+						
+							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
+						
+					
+				</select>
+						<nav class="sidenav" id="side_nav">
+
+          
+            
+            <h5><a href="/index.html">首頁</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">開始使<strong>用 + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/step-step-creating-and-publishing-portal-experience.html">建立入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-creating-and-publishing-page-experience.html">建立頁面內體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/creating-and-managing-gallery-experiences.html">建立和管理體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/training/gallery-training-videos.html">圖片庫培訓影片</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-brightcove-gallery.html">開始使用布萊特灣畫廊</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/overview-gallery-experiences.html">畫廊體驗概覽</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-gallery.html">訓練：圖片庫簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-building-portal-experiences-using-gallery.html">訓練：建置入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-building-page-experiences-using-gallery.html">訓練：建立頁面內體驗</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/experiences/index.html">體驗<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/experiences/portal/index.html">入口網站<strong> + </strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/experiences/portal/adding-video-cloud-videos-portal-experience.html">新增視訊雲端視訊</a></li>
+                        
+                        <li><a href="/experiences/portal/adding-videos-portal-experience.html">新增視訊</a></li>
+                        
+                        <li><a href="/experiences/portal/adding-youtube-videos-portal-experience.html">新增影片</a></li>
+                        
+                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
+                        
+                        <li><a href="/experiences/portal/changing-player-layout-portal-experience.html">變更播放器版面配置</a></li>
+                        
+                        <li><a href="/experiences/portal/configuring-calls-action-portal-experience.html">設定動作呼叫</a></li>
+                        
+                        <li><a href="/experiences/portal/configuring-search-engine-optimization-settings-portal-experience.html">設定 SEO 設定</a></li>
+                        
+                        <li><a href="/experiences/portal/configuring-details-portal-experience.html">設定體驗的詳細資料</a></li>
+                        
+                        <li><a href="/experiences/portal/configuring-third-party-tracking-portal-experience.html">設定第三方追蹤</a></li>
+                        
+                        <li><a href="/experiences/portal/controlling-access-portal-experience.html">控制存取</a></li>
+                        
+                        <li><a href="/experiences/portal/overview-creating-editing-and-publishing-portal-experiences.html">建立、編輯及發佈入口網站體驗</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-appearance-and-behavior-portal-experience.html">自訂外觀和行為</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-catalogue-template-settings.html">自訂目錄範本設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-chronicle-template-settings.html">自訂編年史範本設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-content-portal-experience-pages.html">自訂入口網站頁面的內容</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-marquee-template-settings.html">自訂圈選範本設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-player-and-lead-form-settings-portal-experience.html">自訂玩家和潛在客戶表單設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-site-configuration-portal-experience.html">自訂站台組態</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-site-features-portal-experience.html">自訂網站功能</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-social-settings-portal-experience.html">自訂社交設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-style-portal-experience.html">自訂樣式</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-video-and-playback-settings-portal-experience.html">自訂視訊和播放設定</a></li>
+                        
+                        <li><a href="/experiences/portal/customizing-video-settings-portal-experience.html">自訂視訊設定</a></li>
+                        
+                        <li><a href="/experiences/portal/downloading-videos-portal-experience.html">下載視訊</a></li>
+                        
+                        <li><a href="/experiences/portal/exporting-gallery-lead-data.html">匯出主機庫商機資料</a></li>
+                        
+                        <li><a href="/experiences/portal/indexing-gallery-portal-experience.html">建立入口網站體驗索引</a></li>
+                        
+                        <li><a href="/experiences/portal/overview-gallery-portal-templates.html">圖庫入口網站範本概觀</a></li>
+                        
+                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
+                        
+                        <li><a href="/experiences/portal/updating-gallery-templates.html">更新資源庫範本</a></li>
+                        
+                        <li><a href="/experiences/portal/using-lead-form-portal-experience.html">使用潛在客戶表單</a></li>
+                        
+                        <li><a href="/experiences/portal/using-custom-fonts-portal-experience.html">使用自訂字型</a></li>
+                        
+                        <li><a href="/experiences/portal/using-site-editor-customize-portal-experience.html">使用網站編輯器自訂體驗</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/experiences/inpage/index.html">頁面內<strong> + </strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/experiences/inpage/adding-components-page-experience.html">新增元件</a></li>
+                        
+                        <li><a href="/experiences/inpage/adding-interactions-page-experience.html">新增互動</a></li>
+                        
+                        <li><a href="/experiences/inpage/adding-videos-page-experience.html">新增視訊</a></li>
+                        
+                        <li><a href="/experiences/inpage/configuring-companion-components-page-experience.html">配置輔助元件</a></li>
+                        
+                        <li><a href="/experiences/inpage/configuring-details-page-experience.html">設定體驗的詳細資料</a></li>
+                        
+                        <li><a href="/experiences/inpage/configuring-settings-page-experience.html">設定體驗的設定</a></li>
+                        
+                        <li><a href="/experiences/inpage/configuring-video-downloads-page-experience.html">設定視訊下載</a></li>
+                        
+                        <li><a href="/experiences/inpage/creating-custom-themes-page-experiences.html">建立自訂主題</a></li>
+                        
+                        <li><a href="/experiences/inpage/customizing-page-experience.html">自訂頁面內體驗</a></li>
+                        
+                        <li><a href="/experiences/inpage/customizing-style-page-experience.html">自訂樣式</a></li>
+                        
+                        <li><a href="/experiences/inpage/overview-gallery-page-experience-templates.html">頁面內體驗範本概觀</a></li>
+                        
+                        <li><a href="/experiences/inpage/overview-creating-editing-and-publishing-page-experiences.html">概述：建立和發佈頁面內體驗</a></li>
+                        
+                        <li><a href="/experiences/inpage/previewing-and-publishing-page-experience.html">預覽和發佈</a></li>
+                        
+                        <li><a href="/experiences/inpage/reviewing-page-experience-analytics.html">複查分析</a></li>
+                        
+                        <li><a href="/experiences/inpage/reviewing-page-experience-calls-action-analytics.html">檢閱行動呼叫分析</a></li>
+                        
+                        <li><a href="/experiences/inpage/reviewing-page-experience-analytics-dashboard.html">複查分析儀表板</a></li>
+                        
+                        <li><a href="/experiences/inpage/reviewing-page-experience-video-analytics.html">檢閱視訊分析</a></li>
+                        
+                        <li><a href="/experiences/portal/updating-gallery-templates.html">更新資源庫範本</a></li>
+                        
+                        <li><a href="/experiences/inpage/using-dynamic-video-overrides-page-experience.html">使用動態視訊覆寫</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/experiences/live/index.html">現場活動<strong> + </strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/experiences/live/adding-pigeonhole-live-event-page-experience.html">添加鴿子洞到活頁</a></li>
+                        
+                        <li><a href="/experiences/live/adding-pigeonhole-live-event-portal-experience.html">將鴿洞添加到一個活的門戶</a></li>
+                        
+                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
+                        
+                        <li><a href="/experiences/portal/controlling-access-portal-experience.html">控制存取</a></li>
+                        
+                        <li><a href="/experiences/live/creating-live-event-page-experience.html">建立直播活動頁面體驗</a></li>
+                        
+                        <li><a href="/experiences/live/creating-live-event-portal-experience.html">建立即時活動入口網站體驗</a></li>
+                        
+                        <li><a href="/experiences/live/creating-live-event-state-portal-event-experience.html">建立即時事件狀態</a></li>
+                        
+                        <li><a href="/experiences/live/creating-post-event-state-portal-event-experience.html">建立事件後狀態</a></li>
+                        
+                        <li><a href="/experiences/live/creating-pre-event-state-portal-event-experience.html">建立事件前狀態</a></li>
+                        
+                        <li><a href="/experiences/live/customizing-live-event-portal-settings.html">自訂即時事件入口網站設定</a></li>
+                        
+                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/experiences/landing/index.html">登陸頁面<strong> + </strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
+                        
+                        <li><a href="/experiences/landing/creating-landing-page-experience.html">建立登陸頁面體驗</a></li>
+                        
+                        <li><a href="/experiences/portal/exporting-gallery-lead-data.html">匯出主機庫商機資料</a></li>
+                        
+                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
+                        
+                        <li><a href="/experiences/portal/using-lead-form-portal-experience.html">使用潛在客戶表單</a></li>
+                        
+                        <li><a href="/experiences/portal/using-site-editor-customize-portal-experience.html">使用網站編輯器自訂體驗</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/gallery-system-requirements.html">圖庫系統需求</a></li>
+                  
+                
+                  
+                    <li><a href="/general/troubleshooting-brightcove-gallery-issues.html">布萊特灣畫廊問題疑難排解</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-gallery-cookies.html">布萊特灣畫廊曲奇</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/settings/index.html">圖庫設定<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/settings/configuring-gallery-settings.html">設定圖庫設定</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/configuring-youtube-settings.html">設定 YouTube 設定</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/configuring-access-control-profiles.html">設定存取控制設定檔</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/configuring-custom-domains-and-ssl.html">設定自訂網域和 SSL </a></li>
+                  
+                
+                  
+                    <li><a href="/settings/securing-portal-experience-auth0.html">使用 Auth0 保護入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/securing-portal-experience-okta.html">使用 Okta 保護入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/securing-portal-experience-ssl.html">使用 SSL 保護入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/settings/configuring-single-sign-active-directory-federation-services.html">使用 ADFS 設定單一登入</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/develop/index.html">開發人員<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/develop/page-experience-code-snippets.html">頁面內體驗程式碼片段</a></li>
+                  
+                
+                  
+                    <li><a href="/develop/page-experiences-custom-css-reference.html">頁面內體驗自訂 CSS 參考</a></li>
+                  
+                
+                  
+                    <li><a href="/develop/embedding-brightcove-page-experiences-cms.html">在 CMS 中嵌入頁面內體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/develop/overview-page-experience-api.html">概述：頁面內體驗 API </a></li>
+                  
+                
+                  
+                    <li><a href="/develop/overview-page-experience-client-api.html">概述：頁內體驗用戶端 API </a></li>
+                  
+                
+                  
+                    <li><a href="/develop/page-experience-api-error-reference.html">頁面內體驗 API 錯誤參考</a></li>
+                  
+                
+                  
+                    <li><a href="/develop/page-experience-client-api-sample.html">頁面內體驗用戶端 API 範例</a></li>
+                  
+                
+                  
+                    <li><a href="/develop/quick-start-page-experience-platform-rest-api.html">快速入門：頁面內體驗平台 (REST) API </a></li>
+                  
+                
+                  
+                    <li><a href="/develop/reference.html">頁面內體驗平台 API 參考</a></li>
+                  
+                
+                  
+                    <li><a href="https://docs.brightcove.com/in-page-exerience-client-api/ClientApi.html">頁面內體驗用戶端 API 參考</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/gallery-training-videos.html">圖片庫培訓影片</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-gallery.html">訓練：圖片庫簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-building-portal-experiences-using-gallery.html">訓練：建置入口網站體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-building-page-experiences-using-gallery.html">訓練：建立頁面內體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/gallery-release-notes.html">圖片庫發行紀錄</a></li>
+                  
+                
+                  
+                    <li><a href="/release-notes/gallery-template-release-notes.html">圖庫範本版本發行資訊</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">頁面內容</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>逐步：建立和發佈頁面內體驗</h1>
+  <summary>這個快速入門的目的是向您展示如何使用 Brightcove 畫廊建立頁面內體驗。</summary>
+  <section class="bcls-section">
+    <p>完成此「快速入門」後，您應該能夠：</p>
+    <ul>
+      <li>使用「圖庫」建立全新體驗</li>
+      <li>將視訊新增至頁面內體驗</li>
+      <li>自訂頁面內體驗並設計風格</li>
+      <li>預覽和發佈頁面內體驗</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">注意：有關創建門戶網站體驗的分步指南，請參閱<a href="step-step-creating-and-publishing-portal-experience.html">一步步：建立及發佈入口網站體驗</a>。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audience">觀眾</h2>
+    <p>任何想要建立可嵌入網頁的頁面內體驗的 Video Cloud 發行者。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="prereq">先決條件</h2>
+    <ul>
+      <li>可存取「圖庫」模組的視訊雲端帳戶</li>
+      <li>視訊雲端的工作知識</li>
+      <li>本快速入門中使用的示例視頻可用於<a href="https://files.brightcove.com/sample_animal_videos.zip">下載</a>如果需要的話</li>
+      <li>有助於查看<a href="/training/training-demand-building-page-experiences-using-gallery.html">使用圖庫建立頁內體驗</a>訓練</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setup">使用快速入門資產</h2>
+    <p>如果您想要使用此快速入門提供的範例視訊，請執行下列步驟。</p>
+    <ol class="bcls-tasklist-restart">
+      <li><a href="https://files.brightcove.com/sample_animal_videos.zip">下載</a>樣本文件。</li>
+      <li>使用<strong>上載</strong>模塊到<a target="_blank" href="https://studio.support.brightcove.com/basics/video-cloud-basics-uploading-videos.html">上載影片</a>到您的視頻雲帳戶。</li>
+      <li>使用<strong>媒體</strong>模塊到<a target="_blank" href="https://studio.support.brightcove.com/basics/video-cloud-basics-creating-manual-playlist.html">創建動物播放列表</a>並將視頻添加到播放列表。</li>
+      <li>使用<strong>玩家們</strong>模塊到<a target="_blank" href="https://studio.support.brightcove.com/basics/video-cloud-basics-creating-player.html">創建一個新的Brightcove Player</a>叫<strong>畫廊播放器</strong>。</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">注意：範例檔案中的影像稍後會在快速入門中使用。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2>使用資源庫建立頁面內體驗</h2>
+    <p>若要使用布萊特灣畫廊建立頁內體驗，您將完成以下工作：</p>
+    <ul>
+      <li><a href="#account">選擇&nbsp;一個帳戶</a></li>
+      <li><a href="#create">創建新的頁內體驗</a></li>
+      <li><a href="#layout">定制體驗</a></li>
+      <li><a href="#addvideos">將視頻添加到體驗中</a></li>
+      <li><a href="#interactive">為視頻添加互動性</a></li>
+      <li><a href="#style">自訂樣式</a></li>
+      <li><a href="#settings">配置體驗設置</a></li>
+      <li><a href="#details">查看體驗細節</a></li>
+      <li><a href="#preview">預覽和發布頁內體驗</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">選取帳戶</h2>
+    <p>視您的視訊雲端訂閱而定，您可能可以存取多個視訊雲端帳戶。開始使用之前，請確認您使用的是正確的帳戶。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>登入<a href="https://studio.brightcove.com">視訊雲端工作室</a>。</li>
+      <li>目前的 Video Cloud 帳戶名稱會出現在頁面的右上角。如果您有多個帳戶，請按一下帳戶選擇器下拉式清單，然後選取您想要在其中建立頁面內體驗的帳戶。請注意，這也應該是您想要使用的視頻的帳戶。</li>
+      <li>請點擊<strong>畫廊</strong>在導航標題中。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">建立全新的頁面內體驗</h2>
+    <p>若要建立新的頁面內體驗，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>按一下頁面頂端的「<strong>體驗</strong>」連結。</li>
+      <li>如果您尚未建立任何體驗，則不會顯示任何專案頁面。請點擊<strong>創造</strong>旁邊的<strong>頁內</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-no-projects.png"/></figure>
+        <p>如果您已有經驗，請單擊<strong>新體驗</strong>然後點擊<strong>頁內</strong>頁面頂部的鏈接。</p>
+      </li>
+      <li>將顯示頁面內體驗範本清單。找到<strong>垂直播放列表</strong>模板，然後單擊<strong>選擇</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-vertical-playlist-template.png"/></figure>
+        <aside class="bcls-aside bcls-aside--information">注意：一旦您選取範本，就無法變更。有關頁面內體驗模板的更多信息，請參見<a href="/experiences/inpage/overview-gallery-page-experience-templates.html">圖庫頁內體驗模板概述</a>話題。</aside>
+      </li>
+      <li>輸入一個&nbsp;<strong>經驗標題</strong>和<strong>經驗描述</strong>。為了<strong>佈局尺寸</strong>， 選擇<strong>反應靈敏</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-project-overview.png"/></figure>
+        <aside class="bcls-aside bcls-aside--information">注意：這些值可以稍後變更。此快速入門稍後會介紹這個問題。</aside>
+      </li>
+      <li>按一下「<strong>建立體驗</strong>」。</li>
+    </ol>
+    <p>配置編輯器將會開啟。體驗標題會出現在頁面的頂端。標題可以更改為<a href="/experiences/inpage/configuring-details-page-experience.html">體驗細節</a>。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-layout-editor.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="layout">自訂體驗</h2>
+    <p>您可以將物件加入到體驗中以自訂外觀。頁面內體驗有不同的狀態，每個狀態都可以自訂。下列狀態可供自訂：</p>
+    <ul>
+      <li><strong>播放之前</strong> -在任何視頻播放開始之前首次渲染時的體驗如何顯示</li>
+      <li><strong>播放-播放</strong>影片時體驗的顯示方式</li>
+      <li><strong>播放後</strong> -影片播放後體驗的顯示方式</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-layout-states-menu.png"/></figure>
+    <p>若要編輯不同的狀態，請按一下狀態，然後依需要將元件加入至體驗。有關更多信息，請參見<a href="/experiences/inpage/customizing-page-experience.html">自定義頁內體驗</a>。</p>
+    <p>若要將物件新增至頁面內體驗，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>請點擊<strong>佈局</strong>在左側導航欄中。</li>
+      <li>點擊<strong>玩前</strong>州。加號圖標（<img alt="" src="/assets/images/get-started/node16796-plus-icon.png"/>）指示可以在其中添加組件的體驗。按一下體驗頂端的加號圖示。組件選擇器將打開。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-select-component.png"/></figure>
+      </li>
+      <li>點擊<strong>圖片</strong>零件。點擊<strong>瀏覽</strong>鏈接並選擇要用作體驗標題的圖像。請注意，快速入門範例檔案包含可以使用的影像。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-add-image.png"/></figure>
+      </li>
+      <li>按一下「<strong>儲存</strong>」。圖像將出現在體驗上。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-image-added.png"/></figure>
+      </li>
+      <li>單擊圖像組件上方的加號圖標，然後添加一個<strong>文本</strong>體驗的組成部分。輸入一些文本，然後單擊<strong>保存</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-add-text.png"/></figure>
+      </li>
+      <li>確認圖片和文字顯示在體驗上。</li>
+    </ol>
+    <p>若要編輯任何元件性質，或刪除元件，請將游標懸停在該元件上，然後按一下編輯或刪除圖示。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-edit-delete-icon.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="addvideos">新增視訊至體驗</h2>
+    <p>視選取的範本而定，體驗可能一次顯示一或多個視訊。您可以手動將影片新增至體驗中、選擇播放清單或提供參考 ID。有關將視頻添加到頁內體驗的更多信息，請參見<a href="/experiences/inpage/adding-videos-page-experience.html">將視頻添加到頁內體驗</a>。</p>
+    <p>若要將視訊新增至頁面內體驗，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>按一下左側導覽中的「<strong>視訊</strong>」圖示。</li>
+      <li>按一下「<strong>新增視訊</strong>」。</li>
+      <li>選擇一個<strong>方法</strong>的<strong>選擇視頻</strong>手動選擇要添加的視頻<strong>要么</strong>， 選擇一個<strong>方法</strong>的<strong>選擇播放列表</strong>並瀏覽並選擇<strong>動物</strong>您使用示例視頻創建的播放列表。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-select-playlist.png"/></figure>
+      </li>
+      <li>請點擊<strong>選擇</strong>。將會顯示影片清單。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-video-list.png"/></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="interactive">在視訊中新增互動性</h2>
+    <p>連結和卡片互動可以新增至視訊。播放視訊時會顯示互動。有關將交互性添加到體驗中的更多信息，請參見<a href="/experiences/inpage/adding-interactions-page-experience.html">將互動添加到頁內體驗</a>。</p>
+    <p>若要設定視訊的互動性，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>按一下左側導覽中的「<strong>視訊</strong>」圖示。</li>
+      <li>選擇要添加交互性的視頻，然後單擊鏈接圖標（<img alt="" src="/assets/images/get-started/node16796-link-icon.png"/>） 在裡面<strong>動作</strong>柱。</li>
+      <li>加<strong>連結文字</strong>和一個<strong>連結網址</strong>。預覽播放器將顯示連結的預覽。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-link-text-url.png"/></figure>
+      </li>
+      <li>點擊<strong>配置</strong>鏈接。</li>
+      <li>點擊<strong>切換到 ％</strong>鏈接。設置<strong>開始時間</strong>成為視頻中的50％</li>
+      <li>為了<strong>持續時間</strong>，檢查<strong>直到視頻結束</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-configure-link.png"/></figure>
+        <aside class="bcls-aside bcls-aside--information">注意：預覽播放器下的滑桿也可以用來設定連結的開始時間和持續時間。</aside>
+      </li>
+      <li>點擊<strong>設計</strong>鏈接。將連結設定為出現在播放器右下方。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-link-design.png"/></figure>
+      </li>
+      <li>按一下「<strong>儲存</strong>」。將會顯示為視訊設定的所有互動清單。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-interactions.png"/></figure>
+      </li>
+      <li>點擊<strong>X</strong>在對話框標題中關閉交互編輯器。</li>
+    </ol>
+    <p>具有互動性的視頻將在<strong>互動性</strong>列指示已配置的交互類型。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="style">自訂樣式</h2>
+    <p>樣式會控制體驗中使用的字型和色彩。有關自定義樣式的更多信息，請參見<a href="/experiences/inpage/customizing-style-page-experience.html">自定義頁內體驗的樣式</a>。</p>
+    <p>若要設定樣式，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>按一下左側導覽中的「<strong>樣式</strong>」。</li>
+      <li>找到<strong>全球</strong>風格。點擊<strong>文字顏色</strong>圈出並將文字顏色更改為紅色。先前加入體驗的文字元件應變更為紅色。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-text-color.png"/></figure>
+      </li>
+      <li>按一下 [ <strong> X </strong> ] 以關閉檢色器。</li>
+      <li>找到<strong>視頻標題</strong>風格。點擊<strong>文字顏色</strong>圈出並將文字顏色更改為藍色。按一下 [ <strong> X </strong> ] 以關閉檢色器。</li>
+      <li>將左側導航滾動到頂部，然後單擊<strong>返回佈局</strong>鏈接。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="settings">設定體驗設定</h2>
+    <p>體驗設定可控制各個方面的體驗，例如玩家使用、社交設定和其他設定。有關自定義設置的更多信息，請參見<a href="/experiences/inpage/configuring-settings-page-experience.html">配置頁內體驗的設置</a>。</p>
+    <p>若要設定體驗設定，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>請點擊<strong>設置&gt;播放器</strong>在左側導航欄中。</li>
+      <li>使用<strong>可用球員</strong>下拉列表以選擇<strong>畫廊播放器</strong>您之前創建的。這是將在頁面體驗中使用的玩家。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-select-player.png"/></figure>
+      </li>
+      <li>檢查<strong>自動前進到下一個視頻</strong>選項。</li>
+      <li>按一下「<strong>儲存</strong>」。</li>
+      <li>請點擊<strong>設置&gt;社會</strong>在左側導航欄中。</li>
+      <li>選取社交分享選項的顯示方式。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-social-display.png"/></figure>
+      </li>
+      <li>選擇可以分享的社交媒體網站視頻。某些網站也允許張貼自訂訊息。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-social-options.png"/></figure>
+      </li>
+      <li>按一下「<strong>儲存</strong>」。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details">檢閱體驗詳細資料</h2>
+    <p>體驗詳細資料是設定體驗標題和大小的位置。有關自定義體驗詳細信息的更多信息，請參見<a href="/experiences/inpage/configuring-details-page-experience.html">配置頁內體驗的詳細信息</a>。</p>
+    <p>若要設定體驗詳細資料，請依照下列步驟執行。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>按一下左側導覽中的<strong>概觀</strong>。</li>
+      <li>如有需要，請編輯體驗標題和說明。</li>
+      <li>確認<strong>佈局尺寸</strong>被設置為<strong>反應靈敏</strong>。當佈局大小設置為響應，它將調整大小以適應頁面上的容器。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-overview.png"/></figure>
+      </li>
+      <li>如果進行了任何更改，請單擊<strong>保存</strong>。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview">預覽和發佈頁面內體驗</h2>
+    <p>預覽頁面內體驗可讓您查看體驗的顯示方式，而不必在圖庫介面中檢視。發佈網頁內體驗會產生顯示網頁內部體驗所需的內嵌程式碼。有關預覽和發布頁內體驗的更多信息，請參見<a href="/experiences/inpage/previewing-and-publishing-page-experience.html">預覽和發布頁內體驗</a>。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>若要預覽頁面內體驗，請編輯體驗，然後按一下「<strong>預覽</strong>」。</li>
+      <li>桌面預覽會在新的瀏覽器索引標籤中開啟。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-desktop-preview.png"/></figure>
+      </li>
+      <li>左上角的下拉式清單可用於預覽不同裝置類型的體驗，也可以在不同的體驗狀態下預覽體驗。下方會顯示行動裝置預覽。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-mobile-preview.png"/></figure>
+      </li>
+      <li>若要發佈頁面內體驗，請按一下「<strong>發佈與嵌入</strong>」。</li>
+      <li>請點擊<strong>發布</strong>要么<strong>發布變更</strong>。</li>
+      <li>發布過程將開始，完成後，<strong>發布狀態</strong>將更改為<strong>這種經驗是最新的</strong>。&nbsp;請注意，更新體驗可能需要幾分鐘的時間。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node16796-published.png"/></figure>
+      </li>
+    </ol>
+    <p>發布頁內體驗後，<strong>共享網址</strong>可以與他人共享，以便他們可以預覽體驗。「內嵌程式碼」可用來在現有的網頁中嵌入「頁內體驗」。</p>
+    <aside class="bcls-aside bcls-aside--information">注意：您對頁面內體驗所做的任何變更都需要重新發佈體驗。<strong>沒有</strong>需要更改任何現有的嵌入代碼<strong>除非</strong>您可以將佈局大小從固定大小更改為響應大小，反之亦然。</aside>
+    <aside class="bcls-aside bcls-aside--information">注意：如果體驗大小設置為<strong>反應靈敏</strong>，<strong>推薦的</strong>必須使用嵌入代碼。的<strong>沒有JavaScript</strong>嵌入代碼沒有響應。</aside>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">頁面內容</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer class="bcls-footer" role="contentinfo">  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>布萊特灣支援</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">系統狀態</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">文獻資料</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>訓練</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">布萊特灣大學</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">亮麗</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
