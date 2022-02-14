@@ -1,609 +1,88 @@
-﻿<!doctype html>
-<html lang="zh-TW">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>將鴿洞與虛擬活動體驗整合</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><span class="product-logo" style="font-family:'Balto Web','Public Sans';font-size:2em;font-weight:bold;">布萊特灣畫廊<sup>™</sup></span></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-Brightcove 
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">首頁</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/experiences/virtual-event/">虛擬事件</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">將鴿洞與虛擬活動體驗整合</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-      <div class="col-sm-3 left-side-bar">
-        				<select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-					<option value="">其他布萊特灣文件</option>
-					
-						
-							<option value="https://support.brightcove.com">文件首頁</option>
-						
-					
-						
-							<option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
-						
-					
-						
-							<option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
-						
-					
-						
-							<option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
-						
-					
-						
-							<option value="https://engage.support.brightcove.com">布萊特灣參與</option>
-						
-					
-						
-							<option value="https://live.support.brightcove.com">Brightcove Live</option>
-						
-					
-						
-							<option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
-						
-					
-						
-							<option value="https://ssai.support.brightcove.com">布萊特灣</option>
-						
-					
-						
-							<option value="https://social.support.brightcove.com">布萊特灣社會</option>
-						
-					
-						
-							<option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
-						
-					
-						
-							<option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
-						
-					
-						
-							<option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
-						
-					
-						
-							<option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
-						
-					
-						
-							<option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
-						
-					
-						
-							<option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
-						
-					
-						
-							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
-						
-					
-				</select>
-						<nav class="sidenav" id="side_nav">
-
-          
-            
-            <h5><a href="/index.html">首頁</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/get-started/index.html">開始使<strong>用 + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/get-started/step-step-creating-and-publishing-portal-experience.html">建立入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/step-step-creating-and-publishing-page-experience.html">建立頁面內體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/creating-and-managing-gallery-experiences.html">建立和管理體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/training/gallery-training-videos.html">圖片庫培訓影片</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/getting-started-brightcove-gallery.html">開始使用布萊特灣畫廊</a></li>
-                  
-                
-                  
-                    <li><a href="/get-started/overview-gallery-experiences.html">畫廊體驗概覽</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-gallery.html">訓練：圖片庫簡介</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-building-portal-experiences-using-gallery.html">訓練：建置入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-building-page-experiences-using-gallery.html">訓練：建立頁面內體驗</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/experiences/index.html">體驗<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/experiences/portal/index.html">入口網站<strong> + </strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/experiences/portal/adding-video-cloud-videos-portal-experience.html">新增視訊雲端視訊</a></li>
-                        
-                        <li><a href="/experiences/portal/adding-videos-portal-experience.html">新增視訊</a></li>
-                        
-                        <li><a href="/experiences/portal/adding-youtube-videos-portal-experience.html">新增影片</a></li>
-                        
-                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
-                        
-                        <li><a href="/experiences/portal/changing-player-layout-portal-experience.html">變更播放器版面配置</a></li>
-                        
-                        <li><a href="/experiences/portal/configuring-calls-action-portal-experience.html">設定動作呼叫</a></li>
-                        
-                        <li><a href="/experiences/portal/configuring-search-engine-optimization-settings-portal-experience.html">設定 SEO 設定</a></li>
-                        
-                        <li><a href="/experiences/portal/configuring-details-portal-experience.html">設定體驗的詳細資料</a></li>
-                        
-                        <li><a href="/experiences/portal/configuring-third-party-tracking-portal-experience.html">設定第三方追蹤</a></li>
-                        
-                        <li><a href="/experiences/portal/controlling-access-portal-experience.html">控制存取</a></li>
-                        
-                        <li><a href="/experiences/portal/overview-creating-editing-and-publishing-portal-experiences.html">建立、編輯及發佈入口網站體驗</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-appearance-and-behavior-portal-experience.html">自訂外觀和行為</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-catalogue-template-settings.html">自訂目錄範本設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-chronicle-template-settings.html">自訂編年史範本設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-content-portal-experience-pages.html">自訂入口網站頁面的內容</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-marquee-template-settings.html">自訂圈選範本設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-player-and-lead-form-settings-portal-experience.html">自訂玩家和潛在客戶表單設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-site-configuration-portal-experience.html">自訂站台組態</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-site-features-portal-experience.html">自訂網站功能</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-social-settings-portal-experience.html">自訂社交設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-style-portal-experience.html">自訂樣式</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-video-and-playback-settings-portal-experience.html">自訂視訊和播放設定</a></li>
-                        
-                        <li><a href="/experiences/portal/customizing-video-settings-portal-experience.html">自訂視訊設定</a></li>
-                        
-                        <li><a href="/experiences/portal/downloading-videos-portal-experience.html">下載視訊</a></li>
-                        
-                        <li><a href="/experiences/portal/exporting-gallery-lead-data.html">匯出主機庫商機資料</a></li>
-                        
-                        <li><a href="/experiences/portal/indexing-gallery-portal-experience.html">建立入口網站體驗索引</a></li>
-                        
-                        <li><a href="/experiences/portal/overview-gallery-portal-templates.html">圖庫入口網站範本概觀</a></li>
-                        
-                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
-                        
-                        <li><a href="/experiences/portal/updating-gallery-templates.html">更新資源庫範本</a></li>
-                        
-                        <li><a href="/experiences/portal/using-lead-form-portal-experience.html">使用潛在客戶表單</a></li>
-                        
-                        <li><a href="/experiences/portal/using-custom-fonts-portal-experience.html">使用自訂字型</a></li>
-                        
-                        <li><a href="/experiences/portal/using-site-editor-customize-portal-experience.html">使用網站編輯器自訂體驗</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/experiences/inpage/index.html">頁面內<strong> + </strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/experiences/inpage/adding-components-page-experience.html">新增元件</a></li>
-                        
-                        <li><a href="/experiences/inpage/adding-interactions-page-experience.html">新增互動</a></li>
-                        
-                        <li><a href="/experiences/inpage/adding-videos-page-experience.html">新增視訊</a></li>
-                        
-                        <li><a href="/experiences/inpage/configuring-companion-components-page-experience.html">配置輔助元件</a></li>
-                        
-                        <li><a href="/experiences/inpage/configuring-details-page-experience.html">設定體驗的詳細資料</a></li>
-                        
-                        <li><a href="/experiences/inpage/configuring-settings-page-experience.html">設定體驗的設定</a></li>
-                        
-                        <li><a href="/experiences/inpage/configuring-video-downloads-page-experience.html">設定視訊下載</a></li>
-                        
-                        <li><a href="/experiences/inpage/creating-custom-themes-page-experiences.html">建立自訂主題</a></li>
-                        
-                        <li><a href="/experiences/inpage/customizing-page-experience.html">自訂頁面內體驗</a></li>
-                        
-                        <li><a href="/experiences/inpage/customizing-style-page-experience.html">自訂樣式</a></li>
-                        
-                        <li><a href="/experiences/inpage/overview-gallery-page-experience-templates.html">頁面內體驗範本概觀</a></li>
-                        
-                        <li><a href="/experiences/inpage/overview-creating-editing-and-publishing-page-experiences.html">概述：建立和發佈頁面內體驗</a></li>
-                        
-                        <li><a href="/experiences/inpage/previewing-and-publishing-page-experience.html">預覽和發佈</a></li>
-                        
-                        <li><a href="/experiences/inpage/reviewing-page-experience-analytics.html">複查分析</a></li>
-                        
-                        <li><a href="/experiences/inpage/reviewing-page-experience-calls-action-analytics.html">檢閱行動呼叫分析</a></li>
-                        
-                        <li><a href="/experiences/inpage/reviewing-page-experience-analytics-dashboard.html">複查分析儀表板</a></li>
-                        
-                        <li><a href="/experiences/inpage/reviewing-page-experience-video-analytics.html">檢閱視訊分析</a></li>
-                        
-                        <li><a href="/experiences/portal/updating-gallery-templates.html">更新資源庫範本</a></li>
-                        
-                        <li><a href="/experiences/inpage/using-dynamic-video-overrides-page-experience.html">使用動態視訊覆寫</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/experiences/live/index.html">現場活動<strong> + </strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/experiences/live/adding-pigeonhole-live-event-page-experience.html">添加鴿子洞到活頁</a></li>
-                        
-                        <li><a href="/experiences/live/adding-pigeonhole-live-event-portal-experience.html">將鴿洞添加到一個活的門戶</a></li>
-                        
-                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
-                        
-                        <li><a href="/experiences/portal/controlling-access-portal-experience.html">控制存取</a></li>
-                        
-                        <li><a href="/experiences/live/creating-live-event-page-experience.html">建立直播活動頁面體驗</a></li>
-                        
-                        <li><a href="/experiences/live/creating-live-event-portal-experience.html">建立即時活動入口網站體驗</a></li>
-                        
-                        <li><a href="/experiences/live/creating-live-event-state-portal-event-experience.html">建立即時事件狀態</a></li>
-                        
-                        <li><a href="/experiences/live/creating-post-event-state-portal-event-experience.html">建立事件後狀態</a></li>
-                        
-                        <li><a href="/experiences/live/creating-pre-event-state-portal-event-experience.html">建立事件前狀態</a></li>
-                        
-                        <li><a href="/experiences/live/customizing-live-event-portal-settings.html">自訂即時事件入口網站設定</a></li>
-                        
-                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/experiences/landing/index.html">登陸頁面<strong> + </strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/experiences/portal/assigning-custom-domain-portal-experience.html">指派自訂網域</a></li>
-                        
-                        <li><a href="/experiences/landing/creating-landing-page-experience.html">建立登陸頁面體驗</a></li>
-                        
-                        <li><a href="/experiences/portal/exporting-gallery-lead-data.html">匯出主機庫商機資料</a></li>
-                        
-                        <li><a href="/experiences/portal/previewing-and-publishing-portal-experience.html">預覽和發佈</a></li>
-                        
-                        <li><a href="/experiences/portal/using-lead-form-portal-experience.html">使用潛在客戶表單</a></li>
-                        
-                        <li><a href="/experiences/portal/using-site-editor-customize-portal-experience.html">使用網站編輯器自訂體驗</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general/index.html">一般<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/general/gallery-system-requirements.html">圖庫系統需求</a></li>
-                  
-                
-                  
-                    <li><a href="/general/troubleshooting-brightcove-gallery-issues.html">布萊特灣畫廊問題疑難排解</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-gallery-cookies.html">布萊特灣畫廊曲奇</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/settings/index.html">圖庫設定<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/settings/configuring-gallery-settings.html">設定圖庫設定</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/configuring-youtube-settings.html">設定 YouTube 設定</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/configuring-access-control-profiles.html">設定存取控制設定檔</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/configuring-custom-domains-and-ssl.html">設定自訂網域和 SSL </a></li>
-                  
-                
-                  
-                    <li><a href="/settings/securing-portal-experience-auth0.html">使用 Auth0 保護入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/securing-portal-experience-okta.html">使用 Okta 保護入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/securing-portal-experience-ssl.html">使用 SSL 保護入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/settings/configuring-single-sign-active-directory-federation-services.html">使用 ADFS 設定單一登入</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/develop/index.html">開發人員<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/develop/page-experience-code-snippets.html">頁面內體驗程式碼片段</a></li>
-                  
-                
-                  
-                    <li><a href="/develop/page-experiences-custom-css-reference.html">頁面內體驗自訂 CSS 參考</a></li>
-                  
-                
-                  
-                    <li><a href="/develop/embedding-brightcove-page-experiences-cms.html">在 CMS 中嵌入頁面內體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/develop/overview-page-experience-api.html">概述：頁面內體驗 API </a></li>
-                  
-                
-                  
-                    <li><a href="/develop/overview-page-experience-client-api.html">概述：頁內體驗用戶端 API </a></li>
-                  
-                
-                  
-                    <li><a href="/develop/page-experience-api-error-reference.html">頁面內體驗 API 錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="/develop/page-experience-client-api-sample.html">頁面內體驗用戶端 API 範例</a></li>
-                  
-                
-                  
-                    <li><a href="/develop/quick-start-page-experience-platform-rest-api.html">快速入門：頁面內體驗平台 (REST) API </a></li>
-                  
-                
-                  
-                    <li><a href="/develop/reference.html">頁面內體驗平台 API 參考</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/in-page-exerience-client-api/ClientApi.html">頁面內體驗用戶端 API 參考</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/gallery-training-videos.html">圖片庫培訓影片</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-introduction-gallery.html">訓練：圖片庫簡介</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-building-portal-experiences-using-gallery.html">訓練：建置入口網站體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-building-page-experiences-using-gallery.html">訓練：建立頁面內體驗</a></li>
-                  
-                
-                  
-                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/release-notes/gallery-release-notes.html">圖片庫發行紀錄</a></li>
-                  
-                
-                  
-                    <li><a href="/release-notes/gallery-template-release-notes.html">圖庫範本版本發行資訊</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">頁面內容</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
-
-<h1>將鴿洞與虛擬活動體驗整合</h1>
+---
+title:將 Pigeonhole 與虛擬活動體驗相結合
+parent: Virtual Event 
+grandparent: Experiences
+description: In this topic you will learn how to integrate Pigeonhole with a Virtual Event Experience.
+layout: staging
+---
+ <h1>將 Pigeonhole 與虛擬活動體驗相結合</h1>
 <article class="bcls-article">
-  <summary>在本主題中，您將學習如何將鴿子洞與虛擬事件體驗整合。</summary>
+  <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>Pigeonhole 可以用來輕鬆地在虛擬活動體驗中將現場問答添加到一個或多個視頻。通常情況下，為現場事件創建一個新的 Pigeonhole，然後可以為您要添加問與答的每個視頻創建工作階段。建立工作階段之後，iframe 嵌入程式碼會使用 Video Cloud 自訂欄位與每個視訊產生關聯。內嵌程式碼會導致 Pigeonhole 問答網格顯示在所選影片的影片播放器旁邊。</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-example.png"/></figure>
+    <p>Pigeonhole 可用於輕鬆地將基於事件的交互性（實時問答、投票、調查等）添加到虛擬事件體驗中的一個或多個視頻。通常，為現場活動創建一個新的Pigeonhole，然後可以為要添加Pigeonhole功能的每個視頻創建會話。建立工作階段之後，iframe 嵌入程式碼會使用 Video Cloud 自訂欄位與每個視訊產生關聯。嵌入代碼將使Pigeonhole窗格顯示在所選視頻的視頻播放器旁邊。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-example.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="pigeonhole">創建一個新的鴿子洞事件</h2>
-    <p>您應該為您的直播活動創建一個新的 Pigeonhole，然後為每個啟用問答的視頻添加會話。</p>
+    <h2 id="pigeonhole">創建一個新的Pigeonhole事件和會話</h2>
+    <p>您應該為現場活動創建一個新的Pigeonhole，然後為每個添加了Pigeonhole功能的視頻添加會話。</p>
     <ol class="bcls-tasklist">
       <li>登入您的信鴿洞帳戶。</li>
-      <li> 請點擊<strong>+添加鴿子洞</strong>然後點擊您的帳戶即可使用。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-add-new.png"/></figure>
+      <li> 點擊<strong>+添加鴿子洞</strong>然後點擊您的帳戶即可使用。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-add-new.png" /></figure>
       </li>
-      <li>輸入<strong>活動名稱</strong>和<strong>密碼</strong>。</li>
-      <li>輸入活動的<strong>開始</strong>日期與<strong>結束</strong>日期。這些日期控制鴿洞將活動多長時間。</li>
-      <li>選取「<strong>時區</strong>」和「<strong>自訂品牌</strong>」選項 (如果適用)。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-new-event.png"/></figure>
+      <li>輸入一個<strong>活動名稱</strong>和<strong>密碼</strong>。</li>
+      <li>進入<strong>開始</strong>和<strong>結尾</strong>活動日期。這些日期控制鴿洞將活動多長時間。</li>
+      <li>選擇一個<strong>時區</strong>和<strong>定製品牌</strong>選項（如果適用）。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-new-event.png" /></figure>
       </li>
-      <li>按一下「<strong>繼續</strong>」。</li>
-      <li>現在事件已創建<strong>議程</strong>項目將在左側導航中被選擇。請點擊<strong>添加會話</strong>然後點擊<strong>創建新的</strong>。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-add-new-session.png"/></figure>
+      <li>點擊<strong>繼續</strong>。</li>
+      <li>現在，事件已創建<strong>議程</strong>項目將在左側導航中被選擇。點擊<strong>新增工作階段</strong>然後點擊<strong>創建新的</strong>。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-add-new-session.png" /></figure>
       </li>
-      <li>選取<strong>問與答的<strong>階段作業類型</strong></strong>。</li>
-      <li>輸入作<strong>業階段名稱</strong>。</li>
-      <li>輸入<strong>開始</strong>與<strong>結束</strong>日期與時間。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-agenda.png"/></figure>
+      <li>選擇一個<strong>會話類型</strong>的<strong>問與答</strong>（也可以使用其他會話類型）。</li>
+      <li>進入一個<strong>會話名稱</strong>。</li>
+      <li>進入<strong>開始</strong>和<strong>結尾</strong>日期和時間。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-agenda.png" /></figure>
       </li>
-      <li>視需要設<strong>定問與答設定</strong>。</li>
-      <li>按<strong>一下「新增問與答</strong>」。確認工作階段已建立。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-new-session-created.png"/></figure>
+      <li>配置<strong>問答設置</strong>作為適當的。</li>
+      <li>點擊<strong>添加問答</strong>並確認會話已創建。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-new-session-created.png" /></figure>
       </li>
-      <li>按一下左側導覽中的「<strong>更多設定</strong>」。</li>
-      <li>按一下頁面頂端的「<strong>整合</strong>」標籤。</li>
-      <li>向下捲動至「<strong>其他</strong>」區段。</li>
-      <li>找到<strong>布萊特灣畫廊嵌入</strong>，然後按一下「<strong>整合</strong>」。</li>
-      <li><strong>( 選擇性) </strong>如果將使用 SSO 保護您的圖庫體驗，請選取 [ <strong>允許使用 SAML 屬性自動登入</strong> ]。這將檢索用戶的姓名和電子郵件地址，並在 Pigeonhole Live 小部件加載時自動登錄他們在 Pigeonhole Live 上。如果沒有勾選該選項，用戶將在 Pigeonhole 內顯示為匿名。按一下「<strong>儲存</strong>」。</li>
-      <li>在「布萊特灣圖庫嵌入」對話方塊中，從下拉式清單中選取您的問與答工作階段。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-embed-code-dialog.png"/></figure>
+      <li>根據需要創建其他會話。</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="embed-code">生成鴿孔嵌入代碼</h2>
+    <p>為了讓Pigeonhole在視頻旁邊顯示，將使用“視頻雲"自定義字段將iframe嵌入代碼添加到視頻中。代碼的格式將是：</p>
+    <code translate="no">
+    <pre>&lt;iframe src="<em>鴿巢網址</em>"&gt;&lt;/iframe&gt;</pre>
+    </code>
+    <p>獲得價值<strong>鴿子URL</strong>， 按著這些次序。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>在“鴿子洞"中，單擊<strong>舉辦活動</strong>在左側導航欄中。</li>
+      <li>點擊鏈接<strong>邀請您的參加者</strong>部分。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-invite-attendees.png" /></figure>
       </li>
-      <li>按一下「<strong>取得內嵌代碼</strong>」。</li>
-      <li>按一下內嵌程式碼並將其複製到剪貼簿。這是將內嵌在圖庫體驗中的程式碼。 </li>
-      <li>按一下「<strong>關閉</strong>」。</li>
+      <li>確認打開了一個帶有所有會話列表的新瀏覽器選項卡。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-session-list.png" /></figure>
+      </li>
+      <li>單擊相應會話的輸入鏈接，例如，<strong>輸入此問答</strong>。請注意，鏈接將根據會話類型而改變。</li>
+      <li>確認Pigeonhole在新的瀏覽器選項卡中打開。Pigeonhole URL顯示在瀏覽器地址欄中。</li>
+    </ol>
+    <p>這<strong>iframe</strong>帶有Pigeonhole URL的代碼將被添加到適當的視頻中。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ph_settings">配置事件設置</h2>
+    <p>還必須配置Pigeonhole事件的設置，以便可以使用SSO信息來創建用戶配置文件。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>在左側導航中，單擊<strong>更多設置</strong>。</li>
+      <li>點擊<strong>參會者</strong>標籤。</li>
+      <li>檢查<strong>允許通過嵌入創建與會者個人資料</strong>選項。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-profile-info.png" /></figure>
+      </li>
+      <li>向下滾動到<strong>註冊人資料</strong>頁面上的部分。</li>
+      <li>檢查<strong>啟用此事件的註冊者資料</strong>選項。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-reg-profiles.png" /></figure>
+      </li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="custom_field">建立自訂欄位</h2>
-    <p>為了讓虛擬事件範本知道要針對視訊顯示哪個 Pigeonhole (如果有的話)，會使用自訂欄位。若要建立自訂欄位，請依照下列步驟執行。</p>
+    <p>為了使虛擬事件模板知道要為視頻顯示哪個Pigeonhole，請使用自定義字段。若要建立自訂欄位，請依照下列步驟執行。</p>
     <ol class="bcls-tasklist-restart">
       <li>登入視訊雲端工作室。</li>
-      <li><strong></strong>在導航標題中，單擊&nbsp;<strong>管理員</strong>&nbsp;接著&nbsp;<strong>視頻場</strong>。請注意，您必須是帳戶管理員才能存取 ADMIN 功能表。</li>
-      <li>創建一個名為的新自定義字段<strong>聊天嵌入</strong>。 </li>
+      <li><strong></strong>在導航標題中，單擊<strong>行政</strong>進而<strong>視頻場</strong> .請注意，您必須是帳戶管理員才能存取 ADMIN 功能表。</li>
+      <li>創建一個新的自定義字段，名稱為<strong>聊天嵌入</strong>。 </li>
       <li>確認內部名稱為<strong>chat_embed</strong>。</li>
       <li>設置<strong>類型</strong>成為<strong>文本</strong>。</li>
       <li><strong>保存</strong>自定義字段。</li>
@@ -611,173 +90,41 @@ Brightcove
     <p>有關在Video Cloud中創建自定義字段的信息，請參閱<a href="https://studio.support.brightcove.com/admin/creating-custom-metadata-fields.html">創建自定義元數據字段</a>。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="qa">在影片中新增問與答</h2>
+    <h2 id="pigeonhole">在視頻中添加鴿子洞</h2>
     <p>若要讓 Pegeonhole 出現在虛擬事件範本中的視訊旁邊，請依照下列步驟執行。</p>
     <ol class="bcls-tasklist-restart">
-      <li>打開媒體模塊。</li>
+      <li>開啟「  媒體」  模組。</li>
       <li>按一下視訊以開啟視訊屬性。</li>
-      <li>找到 [ <strong>自訂欄位</strong> ] 區段並按一下 [ <strong>編輯</strong> ]。</li>
+      <li>找到<strong>自定義字段</strong>部分，然後單擊<strong>編輯</strong>。</li>
       <li>將Pigeonhole嵌入代碼粘貼到<strong>聊天嵌入</strong>自定義字段。
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-set-custom-field.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-set-custom-field.png" /></figure>
       </li>
-      <li>按一下「<strong>儲存</strong>」。</li>
+      <li>點擊<strong>保存</strong>。</li>
     </ol>
   </section>
+  <section class="bcls-section">
+    <h2 id="sso-attributes">將用戶SSO信息傳遞給Pigeonhole</h2>
+    <p>如果使用SSO保護了虛擬事件體驗，則可以將用戶SSO信息傳遞給Pigeonhole，以便可以在Pigeonhole內部跟踪用戶。以下各節詳細介紹了將SSO信息傳遞給Pigeonhole所需的設置和步驟。</p>
+    <h3>映射SSO屬性</h3>
+    <p>您需要確保映射了正確的SSO屬性，以便可以將它們傳遞給您的體驗，然後傳遞給Pigeonhole。積分Pigeonhole尋找以下值：</p>
+    <ul>
+      <li><code translate="No">fname</code> -用戶名</li>
+      <li><code translate="No">nameID</code> -用戶的電子郵件地址</li>
+    </ul>
+    <p>下面的示例顯示了從Okta SSO Admin頁面內部公開的這些屬性。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/live/phole-okta-example.png" /></figure>
+    <h3>在訪問控製配置文件中公開屬性</h3>
+    <p>確保用於確保體驗安全的訪問控製配置文件具有<strong>公開所有屬性</strong>選項已選中。如果 SSO 資訊無法使用，使用者會在 Pigeonhole 中顯示為匿名。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>開啟「  圖庫」  模組。</li>
+      <li>點擊<strong>設定值</strong>在標題中。</li>
+      <li>在左側導航中，單擊<strong>訪問控製配置文件</strong> .</li>
+      <li>按一下用來保護體驗的設定檔的編輯圖示。</li>
+      <li>確保<strong>暴露所有屬性</strong>設置被檢查。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/virtual-event/phole-sso-expose.png" /></figure>
+      </li>
+    </ol>
+    <p>有關配置單點登錄的信息，請參閱<a href="/settings/configuring-access-control-profiles.html#sso">配置訪問控製配置文件</a>。如果所有項目都設定正確，當檢視器登入體驗時，使用者資訊會顯示在 Pigeonhole 中。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/live/phole-portal-example-highlight.png" /></figure>
+  </section>
 </article>
-
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">頁面內容</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>布萊特灣支援</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">系統狀態</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">文獻資料</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>訓練</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">布萊特灣大學</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">亮麗</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div>
-</div>
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
-
-</body>
-
-</html>
