@@ -1,0 +1,1817 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW"> 
+    <head>
+        <title>配置頁面內體驗的設置</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="在本主題中，您將學習如何自定義頁面內體驗的設置。">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+        
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span> <span></span> <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand" href="https://support.brightcove.com/" style="margin-left: 15px;"> <img class="logo-icon me-2" src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png" alt="標識" style="margin-bottom: 9px;"/>
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://interactivity.support.brightcove.com/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+          
+          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsche</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">家</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/get-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;入門</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-creating-and-publishing-portal-experience.html">創建門戶體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/step-step-creating-and-publishing-page-experience.html">創建頁內體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/creating-and-managing-gallery-experiences.html">創建和管理體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/getting-started-brightcove-gallery.html">Brightcove Gallery 入門</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/overview-gallery-experiences.html">畫廊體驗概覽</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/get-started/training/index.html">訓練</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/experiences/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;經歷</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/experiences/portal/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;門戶網站</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;入門</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/getting-started/overview-creating-editing-and-publishing-portal-experiences.html">創建、編輯和發布</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/training/training-demand-introduction-gallery.html">培訓 - 畫廊介紹</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/training/training-demand-building-portal-experiences-using-gallery.html">培訓 - 構建門戶體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/step-step-creating-and-publishing-portal-experience.html">一步步：創建和發布</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/templates/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;模板</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/overview-gallery-portal-templates.html">門戶模板概述</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/updating-gallery-templates.html">更新圖庫模板</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/working-with-immersion-template.html">使用沉浸式門戶模板</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/customizing-catalogue-template-settings.html">自定義目錄模板設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/customizing-chronicle-template-settings.html">自定義 Chronicle 模板設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/customizing-immersion-template-settings.html">自定義沉浸式模板設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/customizing-marquee-template-settings.html">自定義選取框模板設置</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/videos/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;添加視頻</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/videos/adding-videos-portal-experience.html">添加視頻</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/videos/adding-video-cloud-videos-portal-experience.html">添加視頻雲視頻</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/videos/adding-youtube-videos-portal-experience.html">添加 YouTube 視頻</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/videos/downloading-videos-portal-experience.html">下載視頻</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/customizing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;客制化</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/using-site-editor-customize-portal-experience.html">使用網站編輯器</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-appearance-and-behavior-portal-experience.html">自定義外觀和行為</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-content-portal-experience-pages.html">自定義頁面內容</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-player-and-lead-form-settings-portal-experience.html">自定義播放器和潛在客戶表單設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-site-configuration-portal-experience.html">自定義站點配置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-site-features-portal-experience.html">自定義站點功能</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-social-settings-portal-experience.html">自定義社交設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-style-portal-experience.html">自定義樣式</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-video-and-playback-settings-portal-experience.html">自定義視頻和播放設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-video-settings-portal-experience.html">自定義視頻設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/using-custom-fonts-portal-experience.html">使用自定義字體</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/changing-player-layout-portal-experience.html">更改播放器佈局</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/configuring-details-portal-experience.html">配置細節</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/using-multi-lingual-metadata.html">使用多語言元數據</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/other/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;其他特性</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/configuring-calls-action-portal-experience.html">配置號召性用語</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/indexing-gallery-portal-experience.html">索引門戶體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/using-lead-form-portal-experience.html">使用潛在客戶表格</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/exporting-gallery-lead-data.html">導出圖庫潛在客戶數據</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/configuring-search-engine-optimization-settings-portal-experience.html">配置搜索引擎優化設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/configuring-third-party-tracking-portal-experience.html">配置第三方跟踪</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/portal/publishing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;出版</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/previewing-and-publishing-portal-experience.html">預覽和發布</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/assigning-custom-domain-portal-experience.html">分配自定義域</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/controlling-access-portal-experience.html">控制訪問</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/experiences/inpage/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;頁內</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;入門</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/getting-started/overview-creating-editing-and-publishing-page-experiences.html">概述：創建和發布頁內體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/training/training-demand-introduction-gallery.html">培訓 - 畫廊介紹</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/training/training-demand-building-page-experiences-using-gallery.html">培訓 - 建立頁內體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/get-started/step-step-creating-and-publishing-page-experience.html">一步步：創建和發布頁內體驗</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/templates/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;模板</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/templates/overview-gallery-page-experience-templates.html">模板概述</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/updating-gallery-templates.html">更新圖庫模板</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/customizing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;客制化</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/customizing-page-experience.html">定制體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/adding-components-page-experience.html">添加組件</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/adding-videos-page-experience.html">添加視頻</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/customizing-style-page-experience.html">自定義樣式</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/adding-interactions-page-experience.html">添加交互</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/configuring-companion-components-page-experience.html">配置配套組件</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/customizing/configuring-details-page-experience.html">配置細節</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/experiences/inpage/customizing/configuring-settings-page-experience.html" aria-current="page">配置設置</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/other/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;其他特性</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/other/using-dynamic-video-overrides-page-experience.html">使用動態視頻覆蓋</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/other/configuring-video-downloads-page-experience.html">配置視頻下載</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/other/creating-custom-themes-page-experiences.html">創建自定義主題</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/publishing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;出版</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/publishing/previewing-and-publishing-page-experience.html">預覽和發布</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/templates/updating-gallery-templates.html">更新圖庫模板</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/inpage/analytics/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;分析</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/analytics/reviewing-page-experience-analytics.html">審查分析</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/analytics/reviewing-page-experience-analytics-dashboard.html">查看分析儀表板</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/analytics/reviewing-page-experience-video-analytics.html">審查視頻分析</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/analytics/reviewing-page-experience-calls-action-analytics.html">審查號召性用語分析</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/experiences/live/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;現場活動</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/live/portal/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;門戶網站</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/creating-live-event-portal-experience.html">創建現場活動門戶</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/creating-pre-event-state-portal-event-experience.html">創建事件前狀態</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/creating-live-event-state-portal-event-experience.html">創建現場活動狀態</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/creating-post-event-state-portal-event-experience.html">創建事件後狀態</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/customizing-live-event-portal-settings.html">自定義設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/previewing-and-publishing-portal-experience.html">預覽和發布</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/assigning-custom-domain-portal-experience.html">分配自定義域</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/publishing/controlling-access-portal-experience.html">控制訪問</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/portal/adding-pigeonhole-live-event-portal-experience.html">將 Pigeonhole 添加到實時門戶</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/live/in-page/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;頁內</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/in-page/creating-live-event-page-experience.html">在頁內創建現場活動</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/live/in-page/adding-pigeonhole-live-event-page-experience.html">添加鴿子洞</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/inpage/publishing/previewing-and-publishing-page-experience.html">預覽和發布</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/experiences/virtual-event/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;虛擬事件</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/virtual-event/getting-started/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;入門</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/getting-started/creating-virtual-event-experience.html">創建虛擬事件體驗</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/getting-started/getting-started-agenda-module.html">議程模塊入門</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/getting-started/overview-virtual-event-template.html">虛擬事件模板概述</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/getting-started/using-site-editor-customize-virtual-event-experience.html">使用網站編輯器</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/virtual-event/videos/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;管理視頻</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/videos/adding-videos-virtual-event-experience.html">添加視頻</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/videos/using-simulated-live-videos.html">使用模擬直播視頻</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/virtual-event/agenda-speakers/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;議程和發言人</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/agenda-speakers/creating-agenda-virtual-event-experience.html">創建活動議程文件</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/agenda-speakers/creating-speakers-virtual-event-experience.html">創建活動發言人文件</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/agenda-speakers/managing-agenda-virtual-event-experience.html">管理活動議程</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/agenda-speakers/managing-event-speakers.html">管理活動發言人</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/virtual-event/customizing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;客制化</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/other/configuring-calls-action-portal-experience.html">配置號召性用語</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/configuring-details-portal-experience.html">配置細節</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/customizing/customizing-appearance-and-behavior-virtual-event-experience.html">自定義外觀和行為</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/customizing/customizing-content-virtual-event-experience-pages.html">自定義頁面內容</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-site-configuration-portal-experience.html">自定義站點配置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-site-features-portal-experience.html">自定義站點功能</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/customizing/customizing-style-virtual-event-experience.html">自定義樣式</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/customizing-video-and-playback-settings-portal-experience.html">自定義視頻和播放設置</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/customizing/integrating-pigeonhole-virtual-event-experience.html">整合鴿巢</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/customizing/managing-event-sponsors.html">管理活動贊助商</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/portal/customizing/using-multi-lingual-metadata.html">使用多語言元數據</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/experiences/virtual-event/other/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i><span>&nbsp;其他特性</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/other/using-role-based-access-control.html">使用基於角色的訪問控制</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/experiences/virtual-event/other/getting-analytics.html">導出虛擬事件查看器數據</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/experiences/landing/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;登陸頁面</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/portal/publishing/assigning-custom-domain-portal-experience.html">分配自定義域</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/landing/creating-landing-page-experience.html">創建著陸頁體驗</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/portal/other/exporting-gallery-lead-data.html">導出圖庫潛在客戶數據</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/portal/publishing/previewing-and-publishing-portal-experience.html">預覽和發布</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/portal/other/using-lead-form-portal-experience.html">使用潛在客戶表格</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/experiences/portal/customizing/using-site-editor-customize-portal-experience.html">使用站點編輯器自定義體驗</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/general/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;一般信息</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/gallery-system-requirements.html">圖庫系統要求</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/troubleshooting-brightcove-gallery-issues.html">Brightcove 畫廊問題故障排除</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/general/brightcove-gallery-cookies.html">Brightcove 畫廊餅乾</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/settings/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;圖庫設置</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/configuring-gallery-settings.html">配置圖庫設置</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/configuring-youtube-settings.html">配置 YouTube 設置</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/configuring-access-control-profiles.html">配置訪問控製配置文件</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/configuring-custom-domains-and-ssl.html">配置自定義域和 SSL</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/securing-portal-experience-auth0.html">使用 Auth0 保護門戶體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/securing-portal-experience-okta.html">使用 Okta 確保門戶體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/securing-portal-experience-ssl.html">使用 SSL 保護門戶體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/settings/configuring-single-sign-active-directory-federation-services.html">使用 ADFS 配置單點登錄</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/develop/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;開發商</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/page-experience-code-snippets.html">頁面內體驗代碼片段</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/page-experiences-custom-css-reference.html">頁面內體驗自定義 CSS 參考</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/embedding-brightcove-page-experiences-cms.html">在 CMS 中嵌入頁面內體驗</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/overview-page-experience-api.html">概述：頁面內體驗 API</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/overview-page-experience-client-api.html">概述：頁面內體驗客戶端 API</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/page-experience-api-error-reference.html">In-Page Experience API 錯誤參考</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/page-experience-client-api-sample.html">頁面內體驗客戶端 API 示例</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/quick-start-page-experience-platform-rest-api.html">快速開始：頁面內體驗平台 (REST) API</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/develop/reference.html">頁內體驗平台 API 參考</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="https://apis.support.brightcove.com/in-page-exerience-client-api/ClientApi.html">頁面內體驗客戶端 API 參考</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/release-notes/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;發行說明</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/release-notes/gallery-release-notes.html">圖庫發行說明</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/release-notes/gallery-template-release-notes.html">圖庫模板發行說明</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2"><i class="fa-solid fa-plus"></i></span>&nbsp;支持</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">查看 Brightcove 系統狀態頁面</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">打開支持案例</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">重置您的支持門戶密碼</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">聯繫銷售</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">家</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/experiences/">經歷</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/experiences/inpage/">頁內</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/experiences/inpage/customizing/">客制化</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">配置頁面內體驗的設置</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br/>
+      
+      
+<article class="bcls-article">
+  <h1>配置頁面內體驗的設置</h1>
+  <summary>在本主題中，您將學習如何自定義頁面內體驗的設置。</summary>
+  <section class="bcls-section">
+    <p>這些設置控制頁內體驗的各個方面。以下設置可用：</p>
+    <ul>
+      <li><a href="#playersettings">播放器</a></li>
+      <li><a href="#videosettings">視頻</a></li>
+      <li><a href="#language">語言</a></li>
+      <li><a href="#social">社會的</a></li>
+      <li><a href="#seo">搜索引擎優化</a></li>
+      <li><a href="#tracking">追踪</a></li>
+      <li><a href="#advanced">先進的</a></li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">筆記：在對體驗進行任何更改後，請確保您<a href="../publishing/previewing-and-publishing-page-experience.html">重新發布體驗</a>因此更改會出現在顯示體驗的網站上。</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="playersettings">配置播放器設置</h2>
+    <p>播放器設置控制所使用的播放器和體驗的播放器行為。要配置播放器設置，請編輯體驗，然後單擊<strong>設置 &gt; 播放器</strong>在左側導航中。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-player-settings.png"/></figure>
+    <div class="BCL-subsection">
+      <h3>選擇球員</h3>
+      <p>要選擇用於頁內體驗的播放器，請從<strong>可用的球員</strong>下拉列表。該列表將顯示您的視頻雲帳戶中的所有播放器。</p>
+      <p>選擇播放器後，播放器預覽將顯示所選播放器的預覽。</p>
+      <aside class="bcls-aside bcls-aside--information">筆記：使用頁面內體驗時，播放器樣式只會在視頻播放時反映出來。在 BEFORE PLAY 或 AFTER PLAY 狀態下將看不到玩家樣式。</aside>
+    </div>
+    <div class="BCL-subsection">
+      <h3>設置玩家行為</h3>
+      <p>可以配置播放器設置以自定義播放器行為。以下設置可用：</p>
+      <ul>
+        <li><strong>視頻播放完成時</strong>確定視頻播放完畢後發生的情況：
+          <ul>
+            <li><strong>顯示“播放後”的體驗狀態</strong> - 選擇後，經驗將進入<strong>播放後</strong>說明視頻何時完成。</li>
+            <li><strong>留在當前視頻</strong> - 選擇後，經驗將保留在<strong>播放</strong>說明視頻何時完成。選擇此選項以顯示為播放器配置的自定義結束屏幕（在播放器模塊中配置）。期間顯示的組件<strong>播放</strong>狀態也將保持可見。此選項具有有效刪除的副作用<strong>播放後</strong>從經驗狀態。</li>
+          </ul>
+        </li>
+        <li><strong>在 iOS 設備上啟用內聯播放</strong> - 如果選中，則在使用 Brightcove Player 5.10.5 或更高版本時在 iOS 設備上啟用內聯播放。</li>
+        <li><strong>自動前進到下一個視頻</strong> - 如果選中，將在當前視頻播放完畢後播放體驗中的下一個視頻。此設置還決定是否在<strong>播放後</strong>狀態。如果啟用，將有一個計時器。當計時器歸零時，體驗將過渡到<strong>播放</strong>下一個視頻的狀態。</li>
+      </ul>
+    </div>
+    <div class="BCL-subsection">
+      <h3>使用 IP 受限帳戶</h3>
+      <p><a href="https://player.support.brightcove.com/content-protection/restricting-video-playback-using-ip-address.html">IP 限制帳戶</a>北美以外的地區需要修改 Playback API <code translate="No">base_url</code>在播放器中。頁內體驗將復制此內容<code translate="No">base_url</code>在創建體驗時以及在為體驗選擇玩家時來自玩家。如果<code translate="No">base_url</code>現有體驗發生變化時，Gallery 不會自動更新此值，因為我們不知道它發生了變化。作為解決方法，發布者應按照以下步驟操作：</p>
+      <ol class="bcls-tasklist-restart">
+        <li>編輯體驗。</li>
+        <li>點擊<strong>設置 &gt; 播放器</strong>在左側導航中。</li>
+        <li>選擇與當前所選玩家不同的玩家。</li>
+        <li>重新選擇初始播放器。</li>
+        <li><strong>節省</strong>進而<strong>發布</strong>經歷。</li>
+      </ol>
+      <p>這將更新<code translate="No">base_url</code>以獲得與初始玩家相匹配的體驗。</p>
+    </div>
+    <p>完成後，單擊<strong>節省</strong>保存更改。</p>
+    <div class="BCL-subsection">
+      <h3>使用域受限播放器</h3>
+      <p>&nbsp;域受限玩家需要修改Policy Key &nbsp;在播放器中。頁內體驗將復制此內容<font face="monospace">策略密鑰</font>&nbsp;在創建體驗時以及在為體驗選擇玩家時來自玩家。如果&nbsp;<code translate="No">policy_key</code>&nbsp;現有體驗發生變化時，Gallery 不會自動更新此值，因為我們不知道它發生了變化。作為解決方法，如果發布商更新其批准的域列表，則應遵循以下步驟作為解決方法：</p>
+      <ol class="bcls-tasklist-restart">
+        <li>編輯體驗。</li>
+        <li>點擊<strong>設置 &gt; 播放器</strong>在左側導航中。</li>
+        <li>選擇與當前所選玩家不同的玩家。</li>
+        <li>重新選擇初始播放器。</li>
+        <li><strong>節省</strong>進而<strong>發布</strong>經歷。</li>
+      </ol>
+      <p>這將更新<code translate="No">policy_key</code>&nbsp;以獲得與初始玩家相匹配的體驗。</p>
+    </div>
+    <p>完成後，單擊<strong>節省</strong>保存更改。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="videosettings">配置視頻設置</h2>
+    <p>視頻設置控制一些視頻顯示選項，控制視頻是否可以下載。這些設置僅在視頻處於<strong>播放</strong>狀態。要配置視頻設置，請執行以下步驟：</p>
+    <ol class="bcls-tasklist-restart">
+      <li>編輯體驗。</li>
+      <li>點擊<strong>設置 &gt; 視頻</strong>在左側導航中。</li>
+    </ol>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-video-settings.png"/></figure>
+    <div class="BCL-subsection">
+      <h3>相關鏈接</h3>
+      <p>如果選中，視頻的相關鏈接將與視頻信息一起顯示。相關鏈接配置為<a href="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html#videoinfo">媒體模塊中的視頻屬性</a> .</p>
+    </div>
+    <div class="BCL-subsection">
+      <h3>描述</h3>
+      <p>如果選中，將顯示視頻的詳細說明，而不是包含視頻信息的簡短說明。短描述和長描述被配置為<a href="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html#videoinfo">媒體模塊中的視頻屬性</a> .</p>
+    </div>
+    <div class="BCL-subsection">
+      <h3>觀看指標</h3>
+      <p>如果選中，一個監視指示器（<img alt="" src="/assets/images/experiences/inpage/customizing/node16793-watched-indicator.png"/> ) 將出現在用戶會話期間觀看過的視頻中。</p>
+      <aside class="bcls-aside bcls-aside--information">筆記：觀察指標將使用樣式<strong>覆蓋橫幅</strong> STYLE 菜單中的屬性。</aside>
+    </div>
+    <div class="BCL-subsection">
+      <h3>下載</h3>
+      <p>可以配置頁內體驗，以便觀眾可以下載視頻。下載鏈接允許觀眾下載最高質量的再現。選擇一個下載選項：</p>
+      <ul>
+        <li>不允許視頻下載</li>
+        <li>為每個視頻提供下載鏈接</li>
+        <li>根據自定義字段值為每個視頻提供下載鏈接 - 定義一個自定義字段，然後為任何可以下載的視頻將該字段設置為 true。有關為每個視頻配置下載鏈接的完整步驟，請參閱<a href="../other/configuring-video-downloads-page-experience.html">為頁內體驗配置視頻下載</a> .</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">筆記：視頻必須至少有一個可用的 MP4 版本。</aside>
+    </div>
+    <p>完成後，單擊<strong>節省</strong>保存更改。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="language">配置語言設置</h2>
+    <p>目前，創建頁內體驗時不支持語言設置。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-language-settings.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="social">配置社交設置</h2>
+    <p>社交設置控製播放視頻時可用的社交共享選項。當體驗處於<strong>播放</strong>狀態。當視頻被分享到社交媒體網站時，將出現一個鏈接或圖像，引導觀眾返回體驗。</p>
+    <p>圖庫使用社交媒體元數據代理服務。每當從頁面內體驗中共享視頻或事件時，都會使用此服務，並且是共享 URL 的一部分。它將觀眾重定向到嵌入了頁面內體驗的頁面，但是，爬蟲將看到有關視頻/事件的元數據。通過這種方式，社交媒體爬蟲將獲得有關正在共享的視頻/事件的信息，並可以在社交媒體網站上向最終用戶展示更多相關信息，同時最終用戶仍然能夠訪問原始頁面。</p>
+    <p>要配置社交設置，請編輯體驗，然後單擊<strong>設置 &gt; 社交</strong>在左側導航中。</p>
+    <aside class="bcls-aside bcls-aside--information">筆記：也可以在編輯體驗時配置社交設置<strong>佈局</strong>通過點擊狀態<em>配置共享</em>關聯。</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-social-settings.png"/></figure>
+    <div class="BCL-subsection">
+      <h3>展示</h3>
+      <p>顯示設置決定社交圖標的顯示方式。當。。。的時候<strong>分享</strong>選項 （<img alt="" src="/assets/images/experiences/inpage/customizing/node16793-share-icon.png"/> ) 後，分享圖標將從播放器右側滑入。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-share-settings.png"/></figure>
+      <p>當社交圖標選項 ( <img alt="" src="/assets/images/experiences/inpage/customizing/node16793-social-icon.png"/> ) 被選中時，社交圖標將出現在播放器上方。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-social-icons.png"/></figure>
+    </div>
+    <div class="BCL-subsection">
+      <h3>共享選項</h3>
+      <p>選擇要顯示的社交共享選項。某些平台提供輸入自定義消息的功能。單擊社交平台名稱以輸入自定義消息。單擊鏈接可在消息中使用視頻 URL、名稱或簡短描述值。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-social-custom-message.png"/></figure>
+      <p>再次點擊社交平台名稱，隱藏自定義消息設置。</p>
+    </div>
+    <div class="BCL-subsection">
+      <h3>共享鏈接的社交元數據</h3>
+      <p>輸入<strong>網頁網址</strong>嵌入體驗的頁面，然後單擊<span class="button-blue">產生</span> .這將允許社交網站在觀眾分享您的體驗時顯示第一個視頻的縮略圖、標題和描述。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-social-meta-tags.png"/></figure>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="seo">訪問 SEO 設置</h2>
+    <p>SEO 設置允許您為頁內體驗生成站點地圖和搜索提要。要生成站點地圖和/或搜索提要，請執行以下步驟：</p>
+    <ol class="bcls-tasklist-restart">
+      <li>編輯體驗。</li>
+      <li>點擊<strong>設置</strong> &gt; <strong>搜索引擎優化</strong>在左側導航中。</li>
+      <li>輸入<strong>網頁網址</strong> .這是將發布頁內體驗的站點的 URL。</li>
+      <li>檢查是否應包含視頻標籤。</li>
+      <li>點擊<span class="button-blue">生成代碼</span> .</li>
+    </ol>
+    <p>站點地圖代碼應複製到您現有的站點地圖中以索引頁面內體驗信息。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-seo-settings.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="tracking">配置跟踪</h2>
+    <p>跟踪設置可用於將跟踪數據發送到 Google Analytics。要配置跟踪設置，請編輯體驗，然後單擊<strong>設置 &gt; 跟踪</strong>在左側導航中。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-tracking.png"/></figure>
+    <p>通過在跟踪頁面中提供 Google Analytics 跟踪 ID，體驗中發生的事件將被提交到 Google Analytics 帳戶。每個事件都有一個類別，形式為<strong>Brightcove 體驗 {name} - {state}</strong>在哪裡<strong>{姓名}</strong>是體驗的名稱，並且<strong>{狀態}</strong>是組件的當前播放狀態（之前、期間、之後）。每個事件也可能有一個相關的標籤，通常是該事件發生的視頻的 ID。目前跟踪了以下事件（將來會根據需要添加更多事件）：</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="38%" scope="col">行動</th>
+          <th width="62%" scope="col">描述</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>精選視頻點擊</td>
+          <td>精選視頻被點擊</td>
+        </tr>
+        <tr>
+          <td>視頻點擊</td>
+          <td>視頻被點擊</td>
+        </tr>
+        <tr>
+          <td>觀看視頻點擊</td>
+          <td>觀看的視頻被點擊</td>
+        </tr>
+        <tr>
+          <td>單擊下一個視頻</td>
+          <td>點擊了下一個視頻</td>
+        </tr>
+        <tr>
+          <td>重播點擊</td>
+          <td>單擊“重播”按鈕</td>
+        </tr>
+        <tr>
+          <td>自動前進停止</td>
+          <td>下一個視頻倒計時已停止/取消</td>
+        </tr>
+        <tr>
+          <td>自動前進倒計時結束，正在播放下一個視頻</td>
+          <td>下一個視頻倒計時結束，因此正在播放下一個視頻</td>
+        </tr>
+        <tr>
+          <td>單擊後退按鈕</td>
+          <td>單擊“後退”按鈕</td>
+        </tr>
+        <tr>
+          <td>共享面板已打開</td>
+          <td>共享面板已打開</td>
+        </tr>
+        <tr>
+          <td>共享面板關閉</td>
+          <td>共享面板已關閉</td>
+        </tr>
+        <tr>
+          <td>分享到 {platform} 點擊</td>
+          <td>單擊指定平台（Facebook、Twitter 等）的共享鏈接</td>
+        </tr>
+      </tbody>
+    </table>
+    &nbsp;
+    <aside class="bcls-aside bcls-aside--information">筆記：要了解有關 Google Analytics 的更多信息並為您的網站創建跟踪 ID，請訪問<a href="https://www.google.com/analytics">谷歌分析</a>網站。</aside>
+    <p>完成後，單擊<strong>節省</strong>保存更改。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="advanced">配置高級設置</h2>
+    <p>高級設置可用於<a href="#js">輸入自定義 JavaScript</a>或配置一個<a href="#deeplink">視頻鏈接查詢參數</a> .要配置自定義設置，請編輯體驗，然後單擊<strong>設置 &gt; 高級</strong>在左側導航中。</p>
+    <div class="BCL-subsection">
+      <h3 id="js">JavaScript</h3>
+      <p>輸入自定義 JavaScript 文件的 URL 或粘貼您的自定義 JavaScript。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-custom-js-settings.png"/></figure>
+    </div>
+    <div class="BCL-subsection">
+      <h3 id="deeplink">視頻鏈接查詢參數</h3>
+      <p>視頻鏈接查詢參數可用於指定在深度鏈接到視頻時將使用的查詢字符串參數。深度鏈接通常用於搜索/SEO 以及將視頻分享到社交媒體平台時。默認情況下，圖庫將使用<code translate="No">videoID</code> .</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/experiences/inpage/customizing/node16793-deep-link-url-settings.png"/></figure>
+    </div>
+  </section>
+</article>
+
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">頁面內容</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove 支持</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">系統狀態</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">聯繫支持</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">搜索所有文檔</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">訓練</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">在線課程</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">註冊課程</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">光明灣學院</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">光明灣</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">光明灣網</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/s/">亮點社區論壇</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">產品發布說明</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">文檔更新</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. 保留所有權利。</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">隱私</a><a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">條款和條件</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439" title="領英" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://twitter.com/brightcove" title="推特" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 
